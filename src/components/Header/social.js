@@ -15,6 +15,7 @@ const Img = styled("img")`
 
 const Li = styled("li")`
   margin-right: 0.5rem;
+  
   &:hover ${Img} {
     filter: ${props => props.theme.imgHoverColor};
   }

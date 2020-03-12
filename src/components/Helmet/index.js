@@ -12,9 +12,11 @@ const resolveImage = image => {
     mtImage: defaultImage,
   }
 }
+
 export const PostPageHelmet = ({ frontmatter }) => {
   const { title, description, date, image } = frontmatter
   const { mtImage } = resolveImage(image)
+  
   return (
     <Helmet>
       <title>{title}</title>
@@ -40,6 +42,9 @@ PostPageHelmet.propTypes = {
   frontmatter: PropTypes.shape({
     path: PropTypes.string,
     title: PropTypes.string,
+    description: PropTypes.string,
+    date: PropTypes.string,
+    image: PropTypes.object,
   }),
 }
 

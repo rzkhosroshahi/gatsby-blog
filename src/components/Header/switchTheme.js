@@ -7,6 +7,7 @@ const Slide = styled("div")`
   height: 1.5rem;
   background: #e0e0e0;
   border-radius: 0.7rem;
+
   &:after {
     position: relative;
     display: block;
@@ -22,6 +23,7 @@ const Slide = styled("div")`
 `
 const Input = styled("input")`
   display: none;
+
   &:checked + .slide:after {
     margin-right: 0.4rem;
   }
@@ -41,6 +43,7 @@ const checkInput = () => {
   if (!process.browser) {
     return false
   }
+
   const theme = localStorage.getItem("theme")
   return theme !== "lightTheme"
 }

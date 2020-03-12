@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Switch } from "./switchTheme"
 import { Social } from "./social"
@@ -12,5 +12,5 @@ export const NavInfo = () => {
       <Switch />
       <Social />
     </Div>
-  )
+  );
 }

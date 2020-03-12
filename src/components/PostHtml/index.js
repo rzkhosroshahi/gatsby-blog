@@ -11,7 +11,6 @@ export const PostHtml = styled("div")`
       border-color: ${props => props.theme.linkHoverColor};
     }
   }
-
   p,
   h1,
   h2,
@@ -22,16 +21,13 @@ export const PostHtml = styled("div")`
   p {
     margin: var(--base-line) 0;
   }
-
   h2 {
     margin: var(--base-line) 0;
     line-height: calc(2 * var(--base-line));
   }
-
   h3 {
     margin: var(--base-line) 0;
-  }
-
+  }s
   .gatsby-highlight {
     direction: ltr !important;
     pre {
@@ -50,7 +46,6 @@ export const PostHtml = styled("div")`
     border-radius: 0.1rem;
     color: ${props => props.theme.markColor};
   }
-  
   ul {
     list-style-type: arabic-indic;
     padding-right: 2.618rem;
