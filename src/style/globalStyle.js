@@ -15,26 +15,30 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   @font-face {
-    font-family: 'IRAN';
-          src: url(${fonts.IRANBoldEOT});
+    font-family: 'Sahel';
+          src: url(${fonts.SahelBoldEOT});
   
-    src: url(${fonts.IRANBoldEOT}?#iefix) format('eot'),  /* IE6–8 */
-  url(${fonts.IRANBoldWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
+    src: url(${fonts.SahelBoldEOT}?#iefix) format('eot'),  /* IE6–8 */
+  url(${fonts.SahelBoldWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
   url(${
-    fonts.IRANBoldWOFF
+    fonts.SahelBoldWOFF
   }) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
- url(${fonts.IRANBoldTTF}) format('ttf');
+ url(${fonts.SahelBoldTTF}) format('ttf');
     font-weight: 600;
+    font-style: normal;
+    font-display: swap;
   }
   @font-face {
-    font-family: 'IRAN';
-          src: url(${fonts.IRANEOT});
+    font-family: 'Sahel';
+          src: url(${fonts.SahelEOT});
   
-    src: url(${fonts.IRANEOT}?#iefix) format('eot'),  /* IE6–8 */
-  url(${fonts.IRANWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
-  url(${fonts.IRANWOFF}) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url(${fonts.IRANTTF}) format('ttf');
+    src: url(${fonts.SahelEOT}?#iefix) format('eot'),  /* IE6–8 */
+  url(${fonts.SahelWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
+  url(${fonts.SahelWOFF}) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url(${fonts.SahelTTF}) format('ttf');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
   html {
     direction: rtl;
@@ -63,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   html {
-    font-family: IRAN, serif;
+    font-family: Sahel, serif;
     background-color: ${props => props.theme.backColor};
     -webkit-font-smoothing: antialiased;
     line-height: var(--base-line);

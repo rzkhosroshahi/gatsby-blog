@@ -1,21 +1,19 @@
-
-import IRANBoldTTF from '../../static/fonts/IRAN_SemiBold.ttf';
-import IRANBoldEOT from '../../static/fonts/IRAN_SemiBold.eot';
-import IRANBoldWOFF from '../../static/fonts/IRAN_SemiBold.woff';
-import IRANBoldWOFF2 from '../../static/fonts/IRAN_SemiBold.woff2';
-
-import IRANTTF from '../../static/fonts/IRAN.ttf';
-import IRANEOT from '../../static/fonts/IRAN.eot';
-import IRANWOFF from '../../static/fonts/IRAN.woff';
-import IRANWOFF2 from '../../static/fonts/IRAN.woff2';
+import SahelBoldTTF from '../../static/fonts/Sahel-Bold.ttf';
+import SahelBoldEOT from '../../static/fonts/Sahel-Bold.eot';
+import SahelBoldWOFF from '../../static/fonts/Sahel-Bold.woff';
+import SahelBoldWOFF2 from '../../static/fonts/Sahel-Bold.woff2';
+import SahelTTF from '../../static/fonts/Sahel.ttf';
+import SahelEOT from '../../static/fonts/Sahel.eot';
+import SahelWOFF from '../../static/fonts/Sahel.woff';
+import SahelWOFF2 from '../../static/fonts/Sahel.woff2';
 
 export {
-  IRANBoldTTF,
-  IRANBoldEOT,
-  IRANBoldWOFF,
-  IRANBoldWOFF2,
-  IRANTTF,
-  IRANEOT,
-  IRANWOFF,
-  IRANWOFF2
+  SahelBoldTTF,
+  SahelBoldEOT,
+  SahelBoldWOFF,
+  SahelBoldWOFF2,
+  SahelTTF,
+  SahelEOT,
+  SahelWOFF,
+  SahelWOFF2
 }
