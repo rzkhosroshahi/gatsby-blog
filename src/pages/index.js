@@ -5,12 +5,11 @@ import uuid from "uuid4"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../components/BlogLayout"
 import { PostList } from "../components/PostList"
-import { PostPageHelmet } from '../components/Helmet';
+import { PostPageHelmet } from "../components/Helmet"
 
 const StyledLayout = styled("div")`
   margin-top: calc(3 * var(--base-line));
 `
-
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
@@ -53,7 +52,7 @@ export const query = graphql`
 `
 Layout.propTypes = {
   data: PropTypes.shape({
-    edges: PropTypes.array,
+    allMarkdownRemark: PropTypes.array,
   }).isRequired,
 }
 
