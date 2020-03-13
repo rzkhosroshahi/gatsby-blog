@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import uuid from "uuid4"
 import { graphql } from "gatsby"
 import { BlogLayout } from "../components/BlogLayout"
 import { PostList } from "../components/PostList"
@@ -18,9 +17,10 @@ const Layout = ({ data }) => {
       <StyledLayout>
         {edges.map(edge => {
           const { frontmatter, excerpt } = edge.node
+
           return (
             <PostList
-              key={uuid()}
+              key={frontmatter.title}
               frontmatter={frontmatter}
               excerpt={excerpt}
             />
