@@ -22,7 +22,7 @@ const Template = ({ data, pageContext }) => {
   const { title } = frontmatter
   const { next, prev, pathSlug: slug } = pageContext
   const disqusConfig = {
-    shortname: 'rezakhosroshahi',
+    shortname: 'itstardis-me',
     config: { identifier: slug, title },
   }
   console.log("pageContext ", pageContext)
