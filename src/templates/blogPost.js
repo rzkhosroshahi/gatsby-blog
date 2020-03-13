@@ -2,11 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { DiscussionEmbed } from "disqus-react"
 import { BlogLayout } from "../components/BlogLayout"
 import { H1 } from "../components/H1"
 import { PostHtml } from "../components/PostHtml"
 import { PostPageHelmet } from "../components/Helmet"
-import { DiscussionEmbed } from "disqus-react"
+import { PostNavigate } from "../components/PostNavigate"
 
 const TemplateDiv = styled("div")`
   margin-top: calc(3 * var(--base-line));
@@ -22,11 +23,9 @@ const Template = ({ data, pageContext }) => {
   const { title } = frontmatter
   const { next, prev, pathSlug: slug } = pageContext
   const disqusConfig = {
-    shortname: 'itstardis-me',
+    shortname: "itstardis-me",
     config: { identifier: slug, title },
   }
-  console.log("pageContext ", pageContext)
-  console.log("blog post data ", data)
   return (
     <BlogLayout>
       <PostPageHelmet frontmatter={frontmatter} />
@@ -34,6 +33,10 @@ const Template = ({ data, pageContext }) => {
         <H1>{title}</H1>
         <div className="post__content">
           <PostHtml dangerouslySetInnerHTML={{ __html: html }} />
+          <PostNavigate
+            next={next && next.frontmatter || undefined}
+            prev={prev && prev.frontmatter || undefined}
+          />
           <DiscussionEmbed {...disqusConfig} />
         </div>
       </TemplateDiv>
