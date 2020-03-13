@@ -6,9 +6,11 @@ import { BlogLayout } from "../components/BlogLayout"
 import { H1 } from "../components/H1"
 import { PostHtml } from "../components/PostHtml"
 import { PostPageHelmet } from "../components/Helmet"
+import { DiscussionEmbed } from "disqus-react"
 
 const TemplateDiv = styled("div")`
   margin-top: calc(3 * var(--base-line));
+
   .post__content {
     margin-top: calc(1 * var(--base-line));
   }
@@ -18,7 +20,11 @@ const Template = ({ data, pageContext }) => {
   const { html } = markdownRemark
   const { frontmatter } = markdownRemark
   const { title } = frontmatter
-  const { next, prev } = pageContext
+  const { next, prev, pathSlug: slug } = pageContext
+  const disqusConfig = {
+    shortname: 'rezakhosroshahi',
+    config: { identifier: slug, title },
+  }
   console.log("pageContext ", pageContext)
   console.log("blog post data ", data)
   return (
@@ -28,6 +34,7 @@ const Template = ({ data, pageContext }) => {
         <H1>{title}</H1>
         <div className="post__content">
           <PostHtml dangerouslySetInnerHTML={{ __html: html }} />
+          <DiscussionEmbed {...disqusConfig} />
         </div>
       </TemplateDiv>
     </BlogLayout>
@@ -41,6 +48,7 @@ Template.propTypes = {
   pageContext: PropTypes.shape({
     next: PropTypes.object,
     prev: PropTypes.object,
+    pathSlug: PropTypes.string,
   }).isRequired,
 }
 
