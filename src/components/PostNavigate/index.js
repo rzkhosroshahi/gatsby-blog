@@ -9,6 +9,7 @@ const Div = styled("div")`
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: calc(1 * var(--base-line));
+  margin: var(--base-line) 0;
 `
 const Next = styled("div")`
   display: flex;
