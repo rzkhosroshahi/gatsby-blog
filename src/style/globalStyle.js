@@ -73,6 +73,10 @@ export const GlobalStyle = createGlobalStyle`
     line-height: var(--base-line);
     transition: background-color 0.5s ease;
   }
+  .gatsby-highlight,
+  .gatsby-highlight * {
+    direction: ltr;
+  }
   .main_width {
     width: 90%;
     margin: 0 auto;
