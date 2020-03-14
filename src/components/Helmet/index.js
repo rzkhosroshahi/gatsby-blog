@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { defaultValues } from "./defaultValues"
-import defaultImage from "./Rz.jpeg"
+import defaultImage from "../../../static/Avatar.png"
 
 const resolveImage = image => {
   if (image) {
